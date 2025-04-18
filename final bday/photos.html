@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Unseen, Yet Forever Framed 📸</title>
+  <link rel="stylesheet" href="photos.css" />
+</head>
+<body>
+  <canvas id="heartBackground"></canvas>
+
+  <div class="photo-memory-container">
+    <h1 class="memory-heading">📸 Unseen, Yet Forever Framed</h1>
+
+    <div class="memory-entry">
+      <p>🖼️ If I had a photo of that moment you leaned on my shoulder, I’d frame it forever. But I don’t need one — my heart remembers it perfectly.</p>
+    </div>
+
+    <div class="memory-entry">
+      <p>🖼️ No lens captured your smile as you fed me that first bite of biryani... but it lives in my mind, replaying like a favorite film scene.</p>
+    </div>
+
+    <div class="memory-entry">
+      <p>🖼️ That look you gave me when I handed you the water bottle — the one you thought I didn’t buy — no camera could’ve caught the sparkle in your eyes.</p>
+    </div>
+
+    <div class="memory-entry">
+      <p>🖼️ I wish there was a selfie of us from the garden — me with my arm around you, your head on my shoulder... but some pictures are meant only for the soul.</p>
+    </div>
+
+    <div class="memory-entry final">
+      <p>Even without a single photo together, I remember everything.  
+      Because love doesn’t need proof — only feeling.  
+      And with you, I felt everything. 💖</p>
+    </div>
+
+    <div class="back-btn-wrapper">
+      <button onclick="location.href='features.html'" class="back-btn">⬅️ Back to Dashboard</button>
+    </div>
+  </div>
+
+  <script>
+    const canvas = document.getElementById("heartBackground");
+    const ctx = canvas.getContext("2d");
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const hearts = Array.from({ length: 25 }, () => ({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      size: Math.random() * 20 + 10,
+      speed: Math.random() * 1 + 0.5,
+      opacity: Math.random() * 0.5 + 0.3
+    }));
+
+    function draw() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      hearts.forEach(h => {
+        ctx.beginPath();
+        ctx.fillStyle = `rgba(255,105,180,${h.opacity})`;
+        ctx.font = `${h.size}px serif`;
+        ctx.fillText('💖', h.x, h.y);
+        h.y -= h.speed;
+        if (h.y < -20) h.y = canvas.height + 20;
+      });
+      requestAnimationFrame(draw);
+    }
+
+    draw();
+  </script>
+</body>
+</html>

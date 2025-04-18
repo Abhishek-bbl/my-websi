@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Still No Hug, But So Much Closer 💫</title>
+  <link rel="stylesheet" href="second-meet.css" />
+</head>
+<body>
+  <canvas id="heartBackground"></canvas>
+
+  <div class="second-meet-container">
+    <h1 class="second-meet-heading">Still No Hug, But So Much Closer 💫</h1>
+  
+    <div class="meet-entry">
+      <p>You said you wanted a cute water bottle — 1L, with a sipper, something *you’d love to carry.*</p>
+      <p>I went hunting for it, clicked photos in a shop, and you picked one. I bought it. But lied.</p>
+      <p>I told you, “Didn’t like any,” but I had already kept it aside — just for you, just for *the right moment.*</p>
+    </div>
+  
+    <div class="meet-entry">
+      <p>The next morning, I woke up with a different kind of energy — the kind that rushes only when the heart knows it’s going to see *its person.*</p>
+      <p>I rode again to Almatti, and just like always, you came before me — waiting patiently like a scene out of my favorite film.</p>
+    </div>
+  
+    <div class="meet-entry">
+      <p>We accidentally went to Krishna Garden first. But destiny? It took us where we truly belonged — the silent corners of Luv Kush Garden.</p>
+      <p>You pulled your dupatta aside. That single moment… *I saw the whole world in your face.*</p>
+      <p>You looked at me and asked, “What’s today?”</p>
+      <p>My heart whispered... “The day you made my life beautiful one year ago.”</p>
+    </div>
+  
+    <div class="meet-entry">
+      <p>We sat under the soft sky, the breeze around us... and you slowly leaned your head on my shoulder.</p>
+      <p>That touch. That silence. That closeness... It healed something in me I never knew was broken.</p>
+      <p>I rested my head on yours — and for a second, I forgot what sadness felt like.</p>
+      <p>Trains passed. You pointed at them every time. Sometimes you missed them and laughed — *even your laughter became my favorite sound.*</p>
+    </div>
+  
+    <div class="meet-entry">
+      <p>You kept asking for my bag, again and again, with the cutest pout... knowing I was hiding something.</p>
+      <p>When I refused, you turned away — like a stubborn little baby. And God, you looked so adorably mad, I just wanted to hold your cheeks and kiss the pout away.</p>
+      <p>But I held back. I always do. Because I want every gift to be given... *when your heart least expects but most deserves it.*</p>
+    </div>
+  
+    <div class="meet-entry">
+      <p>We later walked to Mayura Hotel. You wanted mutton biryani, but smiled and adjusted for chicken — just like always, you made the best out of less.</p>
+      <p>That’s when I gave you the bottle.</p>
+      <p>Your eyes lit up — *that very moment became my reason to believe in surprises again.*</p>
+      <p>You fed me the first bite, your tiny arms stretching, and I leaned in. Then I fed you too — our hearts speaking through food, through care, through silence.</p>
+    </div>
+  
+    <div class="meet-entry">
+      <p>You washed your hands and dried them on my shirt again. That shirt now carries your softness forever.</p>
+      <p>We got on the bike and rode toward Muddebihal. I was quiet. But inside me, a storm was raging.</p>
+      <p>I didn’t want the road to end. I didn’t want the day to finish. I just… *wanted more.*</p>
+    </div>
+  
+    <div class="meet-entry">
+      <p>I gave you the chocolate on the way — my tiny way of saying “I love you” when I couldn’t speak the words out loud.</p>
+      <p>And when we reached... you stepped down, said “Bye,” and walked away like it was just another goodbye.</p>
+      <p>But inside me... something shattered.</p>
+    </div>
+  
+    <div class="meet-entry final">
+      <p>I don’t know why… but it felt like *the last goodbye.*</p>
+      <p>Like I wouldn’t see you again. And I couldn’t even say it.</p>
+      <p>We still didn’t hug. Still didn’t take a photo.</p>
+      <p>But we were closer than ever — and that closeness will echo in my soul, forever.</p>
+    </div>
+  
+    <div class="back-btn-wrapper">
+      <button onclick="location.href='features.html'" class="back-btn">⬅️ Back to Dashboard</button>
+    </div>
+  </div>
+  
+
+  <script>
+    // Floating ❤️ canvas
+    const canvas = document.getElementById("heartBackground");
+    const ctx = canvas.getContext("2d");
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const hearts = Array.from({ length: 25 }, () => ({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      size: Math.random() * 20 + 10,
+      speed: Math.random() * 1 + 0.5,
+      opacity: Math.random() * 0.5 + 0.4
+    }));
+
+    function draw() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      hearts.forEach(h => {
+        ctx.beginPath();
+        ctx.fillStyle = `rgba(255,105,180,${h.opacity})`;
+        ctx.font = `${h.size}px serif`;
+        ctx.fillText('💖', h.x, h.y);
+        h.y -= h.speed;
+        if (h.y < -20) h.y = canvas.height + 20;
+      });
+      requestAnimationFrame(draw);
+    }
+
+    draw();
+  </script>
+  <script>
+    const audio = document.getElementById("secondMeetMusic");
+  
+    window.addEventListener("load", () => {
+      // Ensure music starts with a smooth fade-in
+      audio.volume = 0;
+      audio.play().catch(e => console.log("Auto-play blocked"));
+      let volume = 0;
+      const fadeIn = setInterval(() => {
+        if (volume < 0.4) {
+          volume += 0.02;
+          audio.volume = volume;
+        } else {
+          clearInterval(fadeIn);
+        }
+      }, 100);
+    });
+  </script>
+  
+
+</body>
+</html>

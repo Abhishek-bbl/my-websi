@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #ffe6f0, #fff0f5);
+    color: #444;
+    overflow: hidden;
+  }
+  
+  canvas#heartBackground {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    pointer-events: none;
+  }
+  
+  .dashboard-container {
+    text-align: center;
+    padding: 60px 20px;
+  }
+  
+  .dashboard-title {
+    font-size: 2.5rem;
+    color: #ff5e78;
+    margin-bottom: 10px;
+  }
+  
+  .dashboard-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+  }
+  
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 25px;
+    max-width: 1000px;
+    margin: auto;
+    padding: 0 20px;
+  }
+  
+  .feature-card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(255, 105, 180, 0.2);
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #ff5e78;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-5px);
+    background: #ffe3ea;
+  }
+  .gift-sub {
+    font-size: 0.9rem;
+    margin-top: 6px;
+    color: #5e4b56;
+    font-style: italic;
+  }
+  
+  .back-link {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px; /* slightly lower */
+  }
+  
+  .back-link button {
+    background-color: #48371f; /* Green */
+    color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .back-link button:hover {
+    background-color: #694306;
+    transform: scale(1.05);
+  }
+  
+  .back-link button:active {
+    transform: scale(0.98);
+  }
+  

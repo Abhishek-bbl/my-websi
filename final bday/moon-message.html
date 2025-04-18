@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>In the Silence of the Moon 🌕</title>
+  <link rel="stylesheet" href="moon-message.css" />
+</head>
+<body>
+
+  <div class="video-container">
+    <video id="bgVideo" autoplay muted playsinline>
+      <source src="assets/galaxy-bg.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <!-- Play/Pause Button -->
+
+
+    <!-- Initial Typing Message -->
+    <div class="overlay visible" id="textOverlay">
+      <div class="center-text" id="typingText"></div>
+    </div>
+
+    <!-- Moon Line Overlays -->
+    <div class="moon-text-overlay">
+      <p class="moon-fun-line" id="moonLine"></p>
+    </div>
+
+    <!-- Final Blur + Button -->
+    <div class="overlay hidden blue-blur" id="endOverlay">
+      <button id="toLetterBtn">The Words I Never said 💌
+         click here </button>
+    </div>
+  </div>
+
+  <script src="moon-message.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Surprise Gift for Sneha 🎁</title>
+  <link rel="stylesheet" href="gift-reveal.css" />
+</head>
+<body>
+
+  <!-- SCENE WRAPPER -->
+  <div class="gift-scene active" id="gift-scene-1">
+    <div class="gift-reveal-wrapper">
+      <h1 class="gift-title">Your Surprise Awaits 🎀</h1>
+
+      <!-- 🎁 Gift Box -->
+      <div class="gift-box" id="giftBox">
+        <div class="lid" id="lid"></div> <!-- Lid animation -->
+        <img src="images/gift-box.png" alt="Gift" class="gift-img" />
+        <p class="gift-text">A little something... just for your comfort ❤️</p>
+      </div>
+
+      <!-- 🎥 Video Reveal -->
+      <div class="gift-content hidden" id="giftContent">
+        <p class="gift-message">
+          I’ve seen you in pain… and my heart aches every time you say nothing but smile.  
+          So I got this for you — not just a gift, but a little comfort to hold you during the worst days.  
+          You deserve peace, Sneha. You deserve to feel okay — every single day. 🌸
+        </p>
+        <video controls class="gift-video">
+          <source src="assets/gift-video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <!-- Back to Dashboard (only visible after video if needed) -->
+      <div class="back-link hidden" id="backBtn">
+        <button onclick="location.href='surprise.html'">⬅️ Go Back</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="gift-reveal.js"></script>
+</body>
+</html>

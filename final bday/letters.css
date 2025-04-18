@@ -1,0 +1,282 @@
+/* 💌 Love Letters - Styling */
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #fff0f5;
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+    overflow-x: hidden;
+    position: relative;
+  }
+  
+  /* Floating hearts */
+  #heartBackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    pointer-events: none;
+  }
+  
+  /* Wrapper */
+  .letter-wrapper {
+    text-align: center;
+    padding: 4rem 1.5rem;
+  }
+  
+  /* Title */
+  .letter-heading {
+    font-size: 2.2rem;
+    color: #ff5e78;
+    margin-bottom: 2rem;
+    animation: fadeIn 2s ease-out;
+  }
+  
+  /* Envelope animation */
+  .envelope {
+    width: 300px;
+    height: 200px;
+    margin: 0 auto;
+    background: #ffdde4;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(255, 105, 135, 0.2);
+    transition: transform 0.4s ease;
+  }
+  
+  .envelope:hover {
+    transform: scale(1.02);
+  }
+  
+  /* Flap */
+  .envelope-flap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    background: #ffb6c1;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    z-index: 2;
+  }
+  
+  /* Letter inside */
+  .envelope-letter {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    width: 80%;
+    height: 60%;
+    background: #fff;
+    z-index: 1;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .letter-line {
+    font-style: italic;
+    color: #999;
+    font-size: 1rem;
+  }
+  
+  /* Open state */
+  .envelope.open .envelope-flap {
+    animation: openFlap 1s forwards ease-in-out;
+  }
+  
+  .envelope.open {
+    animation: liftEnvelope 1s forwards ease-in-out;
+  }
+  
+  @keyframes openFlap {
+    to {
+      transform: rotateX(180deg);
+      transform-origin: top;
+    }
+  }
+  
+  @keyframes liftEnvelope {
+    to {
+      transform: translateY(-150px);
+      opacity: 0;
+    }
+  }
+  
+  /* Letter content */
+  .letter-content {
+    max-width: 600px;
+    margin: 40px auto;
+    background-color: #fff0f5;
+    border: 2px solid pink;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 0 20px rgba(255, 192, 203, 0.6);
+    font-family: 'Courier New', monospace;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+    opacity: 0;
+    transition: opacity 1s ease;
+  }
+  
+  .letter-content.show {
+    opacity: 1;
+  }
+  
+  .letter-text {
+    white-space: pre-line;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  
+  .letter-text::after {
+    content: '|';
+    animation: blink 1s infinite;
+  }
+  
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  
+  /* Back Button */
+  .back-btn {
+    padding: 10px 24px;
+    font-size: 1rem;
+    background: #ff6781;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .back-btn:hover {
+    background: #ff4566;
+  }
+  
+  /* Animation */
+  @keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  /* Typing Animation */
+  .typing-animation {
+    white-space: pre-line;
+    overflow: hidden;
+    border-right: 2px solid #ff80ab;
+    width: 0;
+    animation: typing 4s steps(1, end) forwards, blink-caret 0.75s step-end infinite;
+  }
+  
+  
+  /* Keyframes */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  @keyframes blink-caret {
+    50% { border-color: transparent }
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+
+body {
+  background: linear-gradient(to bottom right, #ffe6f0, #fff0f5);
+}
+
+.letter-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.letter-heading {
+  font-size: 2rem;
+  color: #ff4d6d;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.letter-paper {
+  width: 90%;
+  max-width: 680px;
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 40px rgba(255, 105, 135, 0.25);
+  margin-top: 0;
+  text-align: left;
+  position: relative;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.5rem;
+  line-height: 1.8;
+  color: #333;
+  overflow: hidden;
+  min-height: 320px;
+}
+
+/* Typing Effect */
+.typing-animation {
+  white-space: pre-wrap;
+  overflow: hidden;
+  display: inline-block;
+  animation: caretBlink 1s step-end infinite;
+  border-right: 2px solid #ff80ab;
+}
+
+@keyframes caretBlink {
+  from, to { border-color: transparent; }
+  50% { border-color: #ff80ab; }
+}
+
+.open-letter-btn {
+  margin-top: 2rem;
+  padding: 12px 24px;
+  background: linear-gradient(45deg, #ff5e78, #ff2e63);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: bold;
+  box-shadow: 0 8px 20px rgba(255, 50, 100, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.open-letter-btn:hover {
+  transform: scale(1.05);
+}
+.floating-text {
+    position: fixed;
+    font-family: 'Segoe UI', cursive;
+    font-size: 1.3rem;
+    color: #ff89b0; /* 💖 brighter romantic pink */
+    text-shadow: 0 0 10px rgba(255, 136, 170, 0.8);
+    pointer-events: none;
+    z-index: 10;
+    transition: transform 10s linear, opacity 10s ease-in;
+    opacity: 1;
+    white-space: nowrap;
+  }
+  

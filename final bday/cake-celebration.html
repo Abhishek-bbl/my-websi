@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday Dummi 🎂</title>
+  <link rel="stylesheet" href="cake-celebration.css" />
+</head>
+<body>
+
+<canvas id="heartBackground"></canvas>
+
+<!-- Music -->
+<audio id="bgMusic" src="assets/birthday-anime.mp3" autoplay loop></audio>
+
+<div class="celebration-wrapper">
+  <h1 class="celebration-title">Happy Birthday, Dummi 🎉</h1>
+
+  <!-- Scene 1a: Candle Glow -->
+  <div class="celebration-scene active" id="scene-1a">
+    <div class="candle-container">
+      <img src="images/candle-cake.png" alt="Birthday Candle" class="candle-cake-img">
+      <div class="candle-flame"></div>
+    </div>
+    <div class="nav-btns">
+      <button class="next-btn" data-target="scene-1">Next ➡️</button>
+    </div>
+  </div>
+
+  <!-- Scene 1: Cake Cutting -->
+  <div class="celebration-scene" id="scene-1">
+    <img src="images/cake-cutting.png" class="scene-img" alt="Cake Cutting">
+    <p class="scene-caption typed-text">You stood there, smiling, holding the knife with me. And in that soft moment, we cut not just a cake... but a piece of forever.</p>
+    <div class="nav-btns">
+      <button class="next-btn" data-target="scene-2">Next ➡️</button>
+    </div>
+  </div>
+
+  <!-- Scene 2 -->
+  <div class="celebration-scene" id="scene-2">
+    <img src="images/feeding-sneha.png" class="scene-img" alt="Feeding Her">
+    <p class="scene-caption typed-text">I picked up that little bite and brought it near you. Your eyes sparkled. Your smile said everything. I just knew... you were my world.</p>
+    <div class="nav-btns">
+      <button class="back-btn" data-target="scene-1">⬅️ Back</button>
+      <button class="next-btn" data-target="scene-3">Next ➡️</button>
+    </div>
+  </div>
+
+  <!-- Scene 3 -->
+  <div class="celebration-scene" id="scene-3">
+    <img src="images/feeding-abhi.png" class="scene-img" alt="Feeding Me">
+    <p class="scene-caption typed-text">Then came your turn. You giggled, stretched your hand — your tiny fingers feeding me the sweetest moment of my life.</p>
+    <div class="nav-btns">
+      <button class="back-btn" data-target="scene-2">⬅️ Back</button>
+      <button class="next-btn" data-target="scene-4">Next ➡️</button>
+    </div>
+  </div>
+
+  <!-- Scene 4 -->
+  <div class="celebration-scene" id="scene-4">
+    <img src="images/hand-holding.png" class="scene-img" alt="Holding Hands">
+    <p class="scene-caption typed-text">The cake was gone. The candles dimmed. But we stayed — just you and me, under those fairy lights, holding onto each other like the whole world faded away.</p>
+    <div class="nav-btns">
+      <button class="back-btn" data-target="scene-3">⬅️ Back</button>
+      <button class="next-btn" data-target="scene-5">Next ➡️</button>
+    </div>
+  </div>
+
+  <!-- Final Scene: Letter Message -->
+  <div class="celebration-scene" id="scene-5">
+    <img src="images/letter.png" class="scene-img" alt="Letter">
+    <div class="letter-box">
+      <p id="birthdayLetter" class="typed-text">
+        Dear Dummi,
+        
+        I know we didn’t get the perfect moment, the grand party, or even that selfie together... but this? This is all my heart wrapped in pixels.
+
+        I built this for you, because you mean everything to me.
+
+        You’re the smile I wait for, the name that beats in my chest, and the reason I write all this — even if I can't always say it out loud.
+
+        Happy Birthday, Sneha. May your smile never fade, and may our memories only grow.
+
+        — Abhi 💖
+      </p>
+    </div>
+    <div class="nav-btns">
+      <button class="back-btn" data-target="scene-4">⬅️ Back</button>
+      <button class="back-btn" onclick="location.href='features.html'">🏠 Back to Dashboard</button>
+    </div>
+  </div>
+</div>
+
+<!-- JS -->
+<script src="cake-celebration.js"></script>
+</body>
+</html>

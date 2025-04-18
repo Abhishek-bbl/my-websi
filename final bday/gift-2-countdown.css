@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: linear-gradient(to bottom, #fef0f5, #ffe4e9);
+    font-family: 'Georgia', serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .gift-reveal-wrapper {
+    text-align: center;
+    padding: 30px;
+    max-width: 700px;
+    width: 90%;
+  }
+  
+  .gift-title {
+    font-size: 2rem;
+    color: #c0396d;
+    margin-bottom: 25px;
+    text-shadow: 1px 1px 4px rgba(255, 182, 193, 0.6);
+  }
+  
+  .countdown-text {
+    font-size: 1.2rem;
+    color: #6a1b3a;
+    margin-bottom: 30px;
+    font-style: italic;
+  }
+  
+  .gift-box {
+    cursor: not-allowed;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    margin: 0 auto;
+  }
+  
+  .gift-box img {
+    width: 180px;
+  }
+  
+  .gift-box.unlocked {
+    opacity: 1;
+    cursor: pointer;
+    pointer-events: auto;
+    animation: glow 2s ease-in-out infinite;
+  }
+  
+  .gift-text {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    color: #6c0e03;
+  }
+  
+  .gift-content {
+    margin-top: 30px;
+    animation: fadeIn 1s ease forwards;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .gift-video {
+    width: 100%;
+    max-width: 550px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  }
+  
+  .back-link {
+    margin-top: 25px;
+  }
+  
+  .back-link button {
+    padding: 10px 25px;
+    background: #c0396d;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .back-link button:hover {
+    background: #962d50;
+  }
+  
+  @keyframes glow {
+    0% {
+      box-shadow: 0 0 10px rgba(255, 105, 180, 0.3);
+    }
+    50% {
+      box-shadow: 0 0 20px rgba(255, 105, 180, 0.6);
+    }
+    100% {
+      box-shadow: 0 0 10px rgba(255, 105, 180, 0.3);
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .gift2-message {
+    font-size: 1.15rem;
+    color: #4b2e2e;
+    line-height: 1.8;
+    font-style: italic;
+    max-width: 90%;
+    margin: 0 auto 30px;
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.6);
+  }
+  
+  .gift2-image {
+    max-width: 300px;
+    width: 90%;
+    border-radius: 10px;
+    animation: pulse 2s infinite;
+    box-shadow: 0 0 18px rgba(0, 0, 0, 0.25);
+  }
+  

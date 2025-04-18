@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday Dummi</title>
+  <link rel="stylesheet" href="birthday-card.css" />
+</head>
+<body>
+  <div class="card-page">
+    <canvas id="confetti"></canvas>
+
+    <div class="scene">
+      <div class="card" id="card">
+        <!-- Front -->
+        <div class="card-face card-front">
+          <h1>Tap to Open</h1>
+          <div class="heart">💝</div>
+        </div>
+
+        <!-- Inside -->
+        <div class="card-face card-inside">
+          <div class="card-content">
+            <h1>Happy Birthday, Dummi</h1>
+            <p class="subtitle">(My moon, my peace, my everything)</p>
+            <pre class="typed-text" id="typedText"></pre>
+            <p class="from">— Yours always,<br>Abhi</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-back-btn">
+      <button onclick="location.href='features.html'">⬅️ Back to Dashboard</button>
+    </div>
+  </div>
+
+  <script src="birthday-card.js"></script>
+</body>
+</html>

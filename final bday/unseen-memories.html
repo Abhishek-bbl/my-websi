@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Unseen, Yet Forever Framed 🖼️</title>
+  <link rel="stylesheet" href="unseen-memories.css" />
+</head>
+<body>
+
+  <!-- Heart Floating Background -->
+  <canvas id="heartBackground"></canvas>
+
+  <!-- Background Music (Optional) -->
+
+  <script>
+    // Wait for user interaction before playing audio
+    document.addEventListener("DOMContentLoaded", function () {
+      const audio = document.getElementById("bgMusic");
+  
+      const playAudio = () => {
+        audio.play().catch(error => {
+          console.log("Autoplay prevented. Waiting for user interaction.");
+        });
+  
+        // Remove the event after first interaction
+        document.removeEventListener("click", playAudio);
+      };
+  
+      document.addEventListener("click", playAudio);
+    });
+  </script>
+  
+  <div class="memory-wrapper">
+    <h1 class="memory-title">Unseen, Yet Forever Framed 💭</h1>
+  
+    <!-- Scene 1 -->
+    <div class="memory-scene active" id="scene-1">
+      <div class="polaroid">
+        <img src="images/scene1.jpg" alt="School corridor moment" class="memory-img" />
+        <div class="polaroid-caption">
+          <p class="typed-text" data-fulltext="That one step outside the classroom — the first time you spoke to me… a moment simple, yet unforgettable."></p>
+        </div>
+      </div>
+      <div class="memory-nav">
+        <button class="nav-btn next-btn" data-target="scene-2">Next ⟶</button>
+      </div>
+    </div>
+  
+    <!-- Scene 2 (Converted) -->
+    <div class="memory-scene" id="scene-2">
+      <div class="polaroid">
+        <img src="images/scene2.jpg" alt="School corridor conversation" class="memory-img" />
+        <div class="polaroid-caption">
+          <p class="typed-text">Every morning in that corridor, we'd talk like time didn’t exist. Not love yet… but it felt like home.</p>
+        </div>
+      </div>
+      <div class="memory-nav">
+        <button class="nav-btn back-btn" data-target="scene-1">⬅️ Back</button>
+        <button class="nav-btn next-btn" data-target="scene-3">Next ⟶</button>
+      </div>
+    </div>
+  
+    
+     <!-- Scene 3 -->
+<div class="memory-scene" id="scene-3">
+  <div class="polaroid">
+    <img src="images/scene3.jpg" alt="Missed meet at railway station and hostel" class="memory-img" />
+    <div class="polaroid-caption">
+      <p class="typed-text" data-fulltext="We planned to meet after school — you at your hostel, me waiting at the railway station. But fate played tricks again… and we never saw each other that day."></p>
+    </div>
+  </div>
+  <div class="memory-nav">
+    <button class="nav-btn back-btn" data-target="scene-2">⬅️ Back</button>
+    <button class="nav-btn next-btn" data-target="scene-4">Next ⟶</button>
+  </div>
+</div>
+<!-- Add Scene 3 below using same structure -->
+ <!-- Scene 3 -->
+<div class="memory-scene" id="scene-3">
+  <div class="polaroid">
+    <img src="images/scene3.jpg" alt="School meeting missed" class="memory-img" />
+    <div class="polaroid-caption">
+      <p class="typed-text" data-fulltext="We planned to meet after school… but fate had other plans. I was at the station. You were in your hostel. And we missed it."></p>
+    </div>
+  </div>
+  <div class="memory-nav">
+    <button class="nav-btn back-btn" data-target="scene-2">⬅️ Back</button>
+    <button class="nav-btn next-btn" data-target="scene-4">Next ⟶</button>
+  </div>
+</div>
+
+<!-- Scene 4 -->
+<div class="memory-scene" id="scene-4">
+  <div class="polaroid">
+    <img src="images/scene4.jpeg" alt="Long silence of years" class="memory-img" />
+    <div class="polaroid-caption">
+      <p class="typed-text" data-fulltext="Two and a half years passed. No texts, no calls, only silence. You blocked me everywhere — but I waited... every single day."></p>
+    </div>
+  </div>
+  <div class="memory-nav">
+    <button class="nav-btn back-btn" data-target="scene-3">⬅️ Back</button>
+    <button class="nav-btn next-btn" data-target="scene-5">Next ⟶</button>
+  </div>
+</div>
+
+<!-- Scene 5 -->
+<div class="memory-scene" id="scene-5">
+  <div class="polaroid">
+    <img src="images/scene5.jpeg" alt="Snapchat message after long gap" class="memory-img" />
+    <div class="polaroid-caption">
+      <p class="typed-text" data-fulltext="Then one day... you messaged on Snapchat. After all that time, my heart raced — it felt like coming home."></p>
+    </div>
+  </div>
+  <div class="memory-nav">
+    <button class="nav-btn back-btn" data-target="scene-4">⬅️ Back</button>
+    <button class="nav-btn next-btn" data-target="scene-6">Next ⟶</button>
+  </div>
+</div>
+
+<!-- Scene 6 -->
+<div class="memory-scene" id="scene-6">
+  <div class="polaroid">
+    <img src="images/scene6.png" alt="Chatting day and night" class="memory-img" />
+    <div class="polaroid-caption">
+      <p class="typed-text" data-fulltext="We talked day and night. Shared everything. Laughed, opened up, and somewhere in those chats... we healed a little."></p>
+    </div>
+  </div>
+  <div class="memory-nav">
+    <button class="nav-btn back-btn" data-target="scene-5">⬅️ Back</button>
+    <button class="nav-btn next-btn" data-target="scene-7">Next ⟶</button>
+  </div>
+</div>
+
+<!-- Scene 7 -->
+<div class="memory-scene" id="scene-7">
+  <div class="polaroid">
+    <img src="images/scene7.jpeg" alt="Waiting outside yoga camp" class="memory-img" />
+    <div class="polaroid-caption">
+      <p class="typed-text" data-fulltext="I waited outside your yoga camp for 6 hours... just to see you. You never came. But I didn’t mind — I just wanted to try."></p>
+    </div>
+  </div>
+  <div class="memory-nav">
+    <button class="nav-btn back-btn" data-target="scene-6">⬅️ Back</button>
+    <button class="nav-btn next-btn" data-target="scene-8">Next ⟶</button>
+  </div>
+</div>
+
+<!-- Scene 8 -->
+<div class="memory-scene" id="scene-8">
+  <div class="polaroid">
+    <img src="images/scene8.png" alt="Second attempt to meet" class="memory-img" />
+    <div class="polaroid-caption">
+      <p class="typed-text" data-fulltext="I came again — same place, same hope. But again... no glimpse of you. Disappointed, I walked back. Still, I didn't give up."></p>
+    </div>
+  </div>
+  <div class="memory-nav">
+    <button class="nav-btn back-btn" data-target="scene-7">⬅️ Back</button>
+    <button class="nav-btn next-btn" data-target="scene-9">Next ⟶</button>
+  </div>
+</div>
+
+<!-- Scene 9 -->
+<div class="memory-scene" id="scene-9">
+  <div class="polaroid">
+    <img src="images/scene9.png" alt="Proposal moment" class="memory-img" />
+    <div class="polaroid-caption">
+      <p class="typed-text" data-fulltext="Finally, I texted you... and proposed. You said yes. My heart exploded with a happiness I had never felt before."></p>
+    </div>
+  </div>
+  <div class="memory-nav">
+    <button class="nav-btn back-btn" data-target="scene-8">⬅️ Back</button>
+    <button class="nav-btn next-btn" data-target="scene-10">Next ⟶</button>
+  </div>
+</div>
+
+<!-- Scene 10 -->
+<div class="memory-scene" id="scene-10">
+  <div class="polaroid">
+    <img src="images/scene10.png" alt="Birthday website" class="memory-img" />
+    <div class="polaroid-caption">
+      <p class="typed-text" data-fulltext="For your birthday, I made you a website — 4 months of heart poured into code. Your reply? Just an emoji. But I smiled anyway."></p>
+    </div>
+  </div>
+  <div class="memory-nav">
+    <button class="nav-btn back-btn" data-target="scene-9">⬅️ Back</button>
+    <button class="nav-btn next-btn" data-target="scene-11">Next ⟶</button>
+  </div>
+</div>
+
+<!-- Scene 11 -->
+<div class="memory-scene" id="scene-11">
+  <div class="polaroid">
+    <img src="images/scene11.png" alt="Blocked again" class="memory-img" />
+    <div class="polaroid-caption">
+      <p class="typed-text" data-fulltext="Then suddenly... you blocked me again. No reason. No goodbye. Just silence — and I shattered from the inside."></p>
+    </div>
+  </div>
+  <div class="memory-nav">
+    <button class="nav-btn back-btn" data-target="scene-10">⬅️ Back</button>
+    <button class="nav-btn next-btn" data-target="scene-12">Next ⟶</button>
+  </div>
+</div>
+
+<!-- Scene 12 -->
+<div class="memory-scene" id="scene-12">
+  <div class="polaroid">
+    <img src="images/scene12.png" alt="Missed call from her" class="memory-img" />
+    <div class="polaroid-caption">
+      <p class="typed-text" data-fulltext="Months later, you called. I missed it. When I saw it, my fingers trembled as I texted, 'Hi' — again."></p>
+    </div>
+  </div>
+  <div class="memory-nav">
+    <button class="nav-btn back-btn" data-target="scene-11">⬅️ Back</button>
+    <button class="nav-btn next-btn" data-target="scene-13">Next ⟶</button>
+  </div>
+</div>
+
+<!-- Scene 13 -->
+<div class="memory-scene" id="scene-13">
+  <div class="polaroid">
+    <img src="images/scene13.png" alt="Arranged marriage discussion" class="memory-img" />
+    <div class="polaroid-caption">
+      <p class="typed-text" data-fulltext="But the reason you texted… broke me. Your parents were planning your wedding with someone else. I felt helpless."></p>
+    </div>
+  </div>
+  <div class="memory-nav">
+    <button class="nav-btn back-btn" data-target="scene-12">⬅️ Back</button>
+    <button class="nav-btn next-btn" data-target="scene-14">Next ⟶</button>
+  </div>
+</div>
+
+<!-- Scene 14 -->
+<div class="memory-scene" id="scene-14">
+  <div class="polaroid">
+    <img src="images/scene14.jpeg" alt="Changed behavior" class="memory-img" />
+    <div class="polaroid-caption">
+      <p class="typed-text" data-fulltext="You were back in my life... but not the same. Cold replies. Long silences. I tried to understand, but it hurt every day."></p>
+    </div>
+  </div>
+  <div class="memory-nav">
+    <button class="nav-btn back-btn" data-target="scene-13">⬅️ Back</button>
+    <button class="nav-btn next-btn" data-target="scene-15">Next ⟶</button>
+  </div>
+</div>
+
+<!-- Scene 15 -->
+<div class="memory-scene" id="scene-15">
+  <div class="polaroid">
+    <img src="images/scene15.jpg" alt="First meeting" class="memory-img" />
+    <div class="polaroid-caption">
+      <p class="typed-text" data-fulltext="Finally, we met. Almatti. After all those years… I saw you again. Everything I held in my heart came rushing back."></p>
+    </div>
+  </div>
+  <div class="memory-nav">
+    <button class="nav-btn back-btn" data-target="scene-14">⬅️ Back</button>
+    <button class="nav-btn next-btn" data-target="scene-16">Next ⟶</button>
+  </div>
+</div>
+
+<!-- Scene 16 -->
+<div class="memory-scene" id="scene-16">
+  <div class="polaroid">
+    <img src="images/scene16.jpeg" alt="Pakwan hotel moment" class="memory-img" />
+    <div class="polaroid-caption">
+      <p class="typed-text" data-fulltext="You slid your plate towards me and said, 'Cut this vada into 8 pieces.' I did — with the biggest smile. My heart? Melted."></p>
+    </div>
+  </div>
+  <div class="memory-nav">
+    <button class="nav-btn back-btn" data-target="scene-15">⬅️ Back</button>
+    <button class="nav-btn next-btn" data-target="scene-17">Next ⟶</button>
+  </div>
+</div>
+
+<!-- Scene 17 -->
+<div class="memory-scene" id="scene-17">
+  <div class="polaroid">
+    <img src="images/scene17.png" alt="Removing mask at Trends" class="memory-img" />
+    <div class="polaroid-caption">
+      <p class="typed-text" data-fulltext="At Trends, while walking down the stairs, I gently removed your mask. That one second... felt like a lifetime."></p>
+    </div>
+  </div>
+  <div class="memory-nav">
+    <button class="nav-btn back-btn" data-target="scene-16">⬅️ Back</button>
+    <button class="nav-btn next-btn" data-target="scene-18">Next ⟶</button>
+  </div>
+</div>
+
+<!-- Scene 18 -->
+<div class="memory-scene" id="scene-18">
+  <div class="polaroid">
+    <img src="images/scene18.png" alt="Feeding each other" class="memory-img" />
+    <div class="polaroid-caption">
+      <p class="typed-text" data-fulltext="At the restaurant, your little hand stretched to feed me a bite. I leaned in. Then I fed you. It was love — raw, quiet, and beautiful."></p>
+    </div>
+  </div>
+  <div class="memory-nav">
+    <button class="nav-btn back-btn" data-target="scene-17">⬅️ Back</button>
+    <button class="nav-btn next-btn" data-target="scene-19a">Next ⟶</button>
+  </div>
+</div>
+
+<!-- Scene 19A -->
+<div class="memory-scene" id="scene-19a">
+  <div class="polaroid">
+    <img src="images/scene19a.webp" alt="Sneha sleeping on shoulder in garden" class="memory-img" />
+    <div class="polaroid-caption">
+      <p class="typed-text" data-fulltext="In the quiet garden, you rested your head on my shoulder, holding my arm gently. I lowered my head onto yours. No words. Just peace. Just us. A moment I could live in forever."></p>
+    </div>
+  </div>
+  <div class="memory-nav">
+    <button class="nav-btn back-btn" data-target="scene-18">⬅️ Back</button>
+    <button class="nav-btn next-btn" data-target="scene-19">Next ⟶</button>
+  </div>
+</div>
+
+<!-- Scene 19 -->
+<div class="memory-scene" id="scene-19">
+  <div class="polaroid">
+    <img src="images/scene20.jpg" alt="Rose on the ride" class="memory-img" />
+    <div class="polaroid-caption">
+      <p class="typed-text" data-fulltext="While riding the bike, I gave you the roses — one hand on the handle, one giving you love. You held them like they were sacred."></p>
+    </div>
+  </div>
+  <div class="memory-nav">
+    <button class="nav-btn back-btn" data-target="scene-19a">⬅️ Back</button>
+    <button class="nav-btn next-btn" data-target="scene-20">Next ⟶</button>
+  </div>
+</div>
+
+<!-- Scene 20 -->
+<div class="memory-scene" id="scene-20">
+  <div class="polaroid">
+    <img src="images/scene19.jpg" alt="Holding hands on bike" class="memory-img" />
+    <div class="polaroid-caption">
+      <p class="typed-text" data-fulltext="I reached back and held your hand. Rode one-handed. That warmth... made time stop. I never wanted to let go."></p>
+    </div>
+  </div>
+  <div class="memory-nav">
+    <button class="nav-btn back-btn" data-target="scene-19">⬅️ Back</button>
+    <button class="nav-btn next-btn" data-target="scene-21">Next ⟶</button>
+  </div>
+</div>
+
+<!-- Scene 21 -->
+<div class="memory-scene" id="scene-21">
+  <div class="polaroid">
+    <img src="images/scene22.jpg" alt="Last goodbye" class="memory-img" />
+    <div class="polaroid-caption">
+      <p class="typed-text" data-fulltext="I dropped you at the stop. You said 'Bye' and walked away. I rode alone, leaving behind a piece of me that will always belong to you."></p>
+    </div>
+  </div>
+  <div class="memory-nav">
+    <button class="nav-btn back-btn" data-target="scene-20">⬅️ Back</button>
+    <button onclick="location.href='features.html'" class="nav-btn">🏠 Dashboard</button>
+  </div>
+</div>
+
+
+
+  
+   
+  </div>
+  
+
+  <!-- JS -->
+  <script src="unseen-memories.js"></script>
+</body>
+</html>

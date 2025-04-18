@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Love Letter to Sneha 💌</title>
+  <link rel="stylesheet" href="letters.css" />
+</head>
+<body>
+
+<canvas id="heartBackground"></canvas>
+
+<div class="letter-wrapper">
+  <h1 class="letter-heading">💌 A Letter for You, Sneha</h1>
+
+  <!-- Envelope -->
+  <div class="envelope" id="envelope">
+    <div class="envelope-flap"></div>
+    <div class="envelope-letter">
+      <span class="letter-line">Click to open your letter...</span>
+    </div>
+  </div>
+
+ <!-- Hidden letter content -->
+<div class="letter-content hidden" id="letterContent">
+    <p class="letter-text"  id="letterText">
+     
+    </p>
+  
+    <button class="back-btn" onclick="location.href='features.html'">⬅️ Back to Dashboard</button>
+  </div>
+  
+  <!-- Background love music -->
+  
+</div>
+
+<!-- Optional floating hearts background -->
+<script>
+  // Background floating ❤️
+  const canvas = document.getElementById("heartBackground");
+  const ctx = canvas.getContext("2d");
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  let hearts = [];
+  for (let i = 0; i < 30; i++) {
+    hearts.push({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      size: Math.random() * 20 + 10,
+      speed: Math.random() * 1 + 0.5,
+      opacity: Math.random() * 0.5 + 0.3
+    });
+  }
+
+  function drawHearts() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    hearts.forEach(h => {
+      ctx.beginPath();
+      ctx.fillStyle = `rgba(255, 105, 180, ${h.opacity})`;
+      ctx.font = `${h.size}px serif`;
+      ctx.fillText("❤️", h.x, h.y);
+      h.y -= h.speed;
+      if (h.y < -20) h.y = canvas.height + 20;
+    });
+    requestAnimationFrame(drawHearts);
+  }
+
+  drawHearts();
+</script>
+
+<!-- JS to trigger animation -->
+<script>
+    const envelope = document.getElementById("envelope");
+    const letterContent = document.getElementById("letterContent");
+    const letterText = document.getElementById("letterText");
+    const loveAudio = document.getElementById("loveAudio");
+  
+    const letterMessage = `
+  My dearest Sneha,
+  
+  This isn't just a letter, it’s a piece of my heart. The day we spent together... I carry it with me like the most precious memory. From the breakfast at Pakwan to the wind brushing your hair during the ride — everything felt like a dream I never wanted to wake up from.
+  
+  Your smile, your laugh, the way you held my shoulder — all of it is etched in my soul.
+  
+  I promise to keep cherishing you, surprising you, and writing stories like this with you... again and again.
+  
+  With all my love,
+  ❤️ Abhi
+    `;
+  
+    let index = 0;
+  
+    envelope.addEventListener("click", () => {
+      envelope.classList.add("open");
+  
+      setTimeout(() => {
+  letterContent.classList.remove("hidden");
+  letterContent.classList.add("show"); // Now visible + fade in
+  letterText.textContent = ""; // Clear previous content
+  loveAudio.volume = 0.4;
+  loveAudio.play();
+  typeWriter(); // Start typing
+}, 1000);
+
+    });
+  
+    function typeWriter() {
+      if (index < letterMessage.length) {
+        letterText.textContent += letterMessage.charAt(index);
+        index++;
+        setTimeout(typeWriter, 35); // Typing speed (ms)
+      }
+    }
+  </script>
+  <script>
+    // ✨ Floating dreamy text logic
+    const dreamyLines = [
+  "I still feel your hand in mine…",
+  "You looked like a dream…",
+  "Come back to me, always.",
+  "My forever, my Sneha…",
+  "The world fades when you smile.",
+  "You’re the reason my heart races.",
+  "That day was written in the stars…",
+  "Even the wind whispered your name.",
+  "I wish I could pause that moment.",
+  "With you, I found my peace.",
+  "Our silence said more than words.",
+  "Your laugh lives in my heart.",
+  "Every second with you felt magical.",
+  "I fell for you — again and again.",
+  "You held my heart without knowing…"
+];
+
+    
+    function createDreamyText() {
+      const span = document.createElement("span");
+      span.textContent = dreamyPhrases[Math.floor(Math.random() * dreamyPhrases.length)];
+      span.classList.add("floating-text");
+    
+      span.style.left = `${Math.random() * 80 + 10}%`; // stays within 10%-90%
+      span.style.top = `${window.innerHeight}px`; // starts at bottom
+    
+      document.body.appendChild(span);
+    
+      requestAnimationFrame(() => {
+        span.style.transform = "translateY(-120vh)";
+        span.style.opacity = "0";
+      });
+    
+      setTimeout(() => {
+        span.remove();
+      }, 10000); // Clean up after animation
+    }
+    
+    setInterval(createDreamyText, 3000);
+    </script>
+    
+    
+
+</body>
+</html>
